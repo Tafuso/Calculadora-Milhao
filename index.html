@@ -18,27 +18,27 @@
     <div class="div-one">
       <h3>Valor inicial investido</h3>
       <label for="valor"> R$
-        <input type="text" id="valor-inicial" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
+        <input type="text" id="valor-inicial" onkeyup="pegarValor()" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
       </label>
       </div>
       <div class="div-two">
       <div class="input-two">
-        <h3>Valor inicial investido</h3>
+        <h3>Valor Mensal investido</h3>
         <label for="valor"> R$
-          <input type="text" id="valor-mensal" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
+          <input type="text" id="valor-mensal" onkeyup="pegarValor()" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
         </label>
         </div>
        
         <div class="input-tree">
           <h3>Rentabilidade (anual)</h3>
           <label for="valor"> %
-            <input type="text" id="rentabilidade" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
+            <input type="text" id="rentabilidade" onkeyup="pegarValor()" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
           </label>
           </div>  
       </div>
       <div class="div-tree">
         <h2>Estimativa até o primeiro milhão</h2>
-        <h2 class="bold">20 anos</h2>
+        <h2 id="resultado"class="bold">--</h2>
       </div>
       <div class="div-four">
         <h2 class="bold">Contate esse desenvolvedor</h2>
@@ -48,4 +48,5 @@
     </div>
 </section>
 </body>
+<script src="index.js"></script>
 </html>
