@@ -1,52 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora do Milhão</title>
-  <link data-n-head="ssr" rel="icon" type="image/png" size="64" href="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-calculator-advertising-kiranshastry-lineal-kiranshastry.png">
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <section>
-  <div class="div-top">
-    <h1>Calculadora do Milhão</h1>
-  </div>
-  <div class="div-box">
-    <h2>Essa ferramenta o ajudará a calcular quando conquistará seu primeiro milhão. Informe seus dados abaixo.</h2>
-    <div class="div-one">
-      <h3>Valor inicial investido</h3>
-      <label for="valor"> R$
-        <input type="text" id="valor-inicial" onkeyup="pegarValor()" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
-      </label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Juros</title>
+    <link
+      data-n-head="ssr"
+      rel="icon"
+      type="image/png"
+      size="64"
+      href="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-calculator-advertising-kiranshastry-lineal-kiranshastry.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section>
+      <div class="div-top">
+        <h1>Calculadora de Juros</h1>
       </div>
-      <div class="div-two">
-      <div class="input-two">
-        <h3>Valor Mensal investido</h3>
-        <label for="valor"> R$
-          <input type="text" id="valor-mensal" onkeyup="pegarValor()" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
-        </label>
+      <div class="div-box">
+        <h2>
+          Uma ferramenta para te ajudar a calcular juros composto. Por padrão,
+          ela calcula o tempo até 1 Milhão.
+        </h2>
+        <div class="div-two">
+          <div class="input-tree">
+            <h3>Valor inicial investido</h3>
+            <label for="valor">
+              R$
+              <input
+                type="text"
+                id="valor-inicial"
+                onkeyup="pegarValor()"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
+              />
+            </label>
+          </div>
+          <div class="input-four">
+            <h3>Valor almejado:</h3>
+            <label for="valor">
+              R$
+              <input
+                type="text"
+                id="valor-almejado"
+                value="1000000"
+                onkeyup="pegarValor()"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
+              />
+            </label>
+          </div>
         </div>
-       
-        <div class="input-tree">
-          <h3>Rentabilidade (anual)</h3>
-          <label for="valor"> %
-            <input type="text" id="rentabilidade" onkeyup="pegarValor()" oninput="this.value = this.value.replace(/[^0-9.]/g, '');" />
-          </label>
-          </div>  
+        <div class="div-two">
+          <div class="input-tree">
+            <h3>Valor Mensal investido</h3>
+            <label for="valor">
+              R$
+              <input
+                type="text"
+                id="valor-mensal"
+                onkeyup="pegarValor()"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
+              />
+            </label>
+          </div>
+
+          <div class="input-four">
+            <h3>Rentabilidade (anual)</h3>
+            <label for="valor">
+              %
+              <input
+                type="text"
+                id="rentabilidade"
+                onkeyup="pegarValor()"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
+              />
+            </label>
+          </div>
+        </div>
+        <div class="div-tree">
+          <h2>Estimativa:</h2>
+          <h2 id="resultado" class="bold">--</h2>
+        </div>
+        <div class="div-four">
+          <h2 class="bold">Contate esse desenvolvedor</h2>
+          <a href="https://www.linkedin.com/in/gustavo-vasquez-480753143/"
+            >Linkedin</a
+          >
+        </div>
+        <p>
+          Aplicação desenvolvida por Gustavo Vasquez. Todos os direitos
+          reservados.
+        </p>
       </div>
-      <div class="div-tree">
-        <h2>Estimativa até o primeiro milhão</h2>
-        <h2 id="resultado"class="bold">--</h2>
-      </div>
-      <div class="div-four">
-        <h2 class="bold">Contate esse desenvolvedor</h2>
-        <a href="https://www.linkedin.com/in/gustavo-vasquez-480753143/">Linkedin</a>
-      </div>
-      <p>Aplicação desenvolvida por Gustavo Vasquez. Todos os direitos reservados.</p>
-    </div>
-</section>
-</body>
-<script src="index.js"></script>
+    </section>
+  </body>
+  <script src="index.js"></script>
 </html>
