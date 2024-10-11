@@ -1,99 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora de Juros</title>
-    <link
-      data-n-head="ssr"
-      rel="icon"
-      type="image/png"
-      size="64"
-      href="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-calculator-advertising-kiranshastry-lineal-kiranshastry.png"
-    />
-    <link rel="stylesheet" href="index.css" />
+    <title>Vite + React + TS</title>
   </head>
   <body>
-    <section>
-      <div class="div-top">
-        <h1>Calculadora de Juros</h1>
-      </div>
-      <div class="div-box">
-        <h2>
-          Uma ferramenta para te ajudar a calcular juros composto. Por padrão,
-          ela calcula o tempo até 1 Milhão.
-        </h2>
-        <div class="div-two">
-          <div class="input-tree">
-            <h3>Valor inicial investido</h3>
-            <label for="valor">
-              R$
-              <input
-                type="text"
-                id="valor-inicial"
-                onkeyup="pegarValor()"
-                oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
-              />
-            </label>
-          </div>
-          <div class="input-four">
-            <h3>Valor almejado:</h3>
-            <label for="valor">
-              R$
-              <input
-                type="text"
-                id="valor-almejado"
-                value="1000000"
-                onkeyup="pegarValor()"
-                oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
-              />
-            </label>
-          </div>
-        </div>
-        <div class="div-two">
-          <div class="input-tree">
-            <h3>Valor Mensal investido</h3>
-            <label for="valor">
-              R$
-              <input
-                type="text"
-                id="valor-mensal"
-                onkeyup="pegarValor()"
-                oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
-              />
-            </label>
-          </div>
-
-          <div class="input-four">
-            <h3>Rentabilidade (anual)</h3>
-            <label for="valor">
-              %
-              <input
-                type="text"
-                id="rentabilidade"
-                onkeyup="pegarValor()"
-                oninput="this.value = this.value.replace(/[^0-9.]/g, '');"
-              />
-            </label>
-          </div>
-        </div>
-        <div class="div-tree">
-          <h2>Estimativa:</h2>
-          <h2 id="resultado" class="bold">--</h2>
-        </div>
-        <div class="div-four">
-          <h2 class="bold">Contate esse desenvolvedor</h2>
-          <a href="https://www.linkedin.com/in/gustavo-vasquez-480753143/"
-            >Linkedin</a
-          >
-        </div>
-        <p>
-          Aplicação desenvolvida por Gustavo Vasquez. Todos os direitos
-          reservados.
-        </p>
-      </div>
-    </section>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
-  <script src="index.js"></script>
 </html>
